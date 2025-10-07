@@ -184,3 +184,34 @@ module.exports.detail = async (req, res) => {
 //     info: users,
 //   });
 // };
+
+module.exports.updateProfile = async (req, res) => {
+  try {
+    const id = req.user.id;
+    const fullName = req.body.fullName;
+    const phoneNumber = req.body.phoneNumber;
+    const gender = req.body.gender;
+    const address = req.body.address;
+    const birthDate = req.body.birthDate;
+    const avatarUrl = req.body.avatarUrl;
+    const updatePayload = {
+      fullName: fullName,
+      phoneNumber: phoneNumber,
+      gender: gender,
+      address: address,
+      birthDate: birthDate,
+    };
+    if (avatarUrl) updatePayload.avatarUrl = avatarUrl;
+    console.log(req.user);
+    await User.updateOne({ _id: id }, updatePayload);
+    res.json({
+      code: 200,
+      message: "cập nhật thành công",
+    });
+  } catch (error) {
+    res.json({
+      code: 400,
+      message: "cap nhat that bai",
+    });
+  }
+};
