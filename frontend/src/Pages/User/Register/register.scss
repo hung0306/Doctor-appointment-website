@@ -1,0 +1,24 @@
+.register-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+  min-height: calc(100vh - 160px);
+}
+
+.register-card {
+  width: 420px;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(12, 23, 36, 0.08);
+}
+
+.register-title {
+  margin: 0 0 18px;
+  text-align: center;
+}
+
+.register-card .ant-form-item {
+  margin-bottom: 12px;
+}

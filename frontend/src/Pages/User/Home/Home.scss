@@ -1,0 +1,407 @@
+.hero {
+  position: relative;
+  height: 500px;
+  background: url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1600&q=80")
+    no-repeat center center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  &__form {
+    width: 1200px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__overlay {
+    background-color: rgba(0, 63, 105, 0.65);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    position: relative;
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin-bottom: 30px;
+  }
+
+  &__search {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    width: 220px;
+    font-size: 1rem;
+    outline: none;
+  }
+  &__select {
+    border: none;
+    border-radius: 8px;
+    width: 220px !important;
+    font-size: 1rem;
+    outline: none;
+    height: 50px !important;
+  }
+
+  &__btn {
+    background-color: #00bfa6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    height: 50px !important;
+
+    &:hover {
+      background-color: #009e8c;
+    }
+  }
+
+  &__secondary-btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+}
+
+// end hero section
+
+.stats {
+  padding: 60px 0;
+  background-color: #fff;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__item {
+    flex: 1;
+    min-width: 220px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-top: 3px solid #00bfa6;
+    border-radius: 12px;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+
+  &__icon {
+    font-size: 2rem;
+    color: #00bfa6;
+    margin-bottom: 10px;
+  }
+
+  &__number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 6px;
+  }
+
+  &__label {
+    font-size: 1rem;
+    color: #555;
+  }
+}
+// end stats section
+.specialties {
+  padding: 80px 0;
+  background-color: #f9fafb;
+
+  //   .container {
+  //     max-width: 1200px;
+  //     margin: 0 auto;
+  //     padding: 0 20px;
+  //   }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0a2530;
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    color: #6c757d;
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+
+  &__underline {
+    width: 60px;
+    height: 3px;
+    background-color: #00bfa6;
+    margin: 0 auto;
+    border-radius: 2px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+  }
+
+  &__card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+      transition: transform 0.4s ease;
+    }
+  }
+
+  &__info {
+    padding: 20px;
+  }
+
+  &__name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #0a2530;
+  }
+
+  &__desc {
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    color: #00bfa6;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+// end SpecialtiesSection style
+
+.doctors {
+  padding: 80px 0;
+  background-color: #fff;
+  text-align: center;
+
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0a2530;
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    color: #6c757d;
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+
+  &__underline {
+    width: 60px;
+    height: 3px;
+    background-color: #00bfa6;
+    margin: 0 auto;
+    border-radius: 2px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+  }
+
+  &__card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: left;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+
+  &__image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__name {
+    font-weight: 600;
+    color: #000;
+    font-size: 1.1rem;
+  }
+
+  &__specialty {
+    color: #00bfa6;
+    font-size: 0.95rem;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+
+    .doctors__star {
+      color: #ffc107;
+      font-size: 1rem;
+    }
+
+    .doctors__score {
+      font-weight: 600;
+      color: #222;
+    }
+
+    .doctors__reviews {
+      color: #6c757d;
+      font-size: 0.9rem;
+    }
+  }
+
+  &__price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  &__experience {
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .btn {
+    flex: 1;
+    padding: 10px 0;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &--primary {
+      background-color: #00bfa6;
+      color: #fff;
+      border: none;
+
+      &:hover {
+        background-color: #009e8c;
+      }
+    }
+
+    &--outline {
+      background: transparent;
+      border: 1px solid #00bfa6;
+      color: #00bfa6;
+
+      &:hover {
+        background-color: #e9f9f7;
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: 40px;
+  }
+
+  &__view-all {
+    width: 200px;
+  }
+}
