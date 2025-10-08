@@ -1,0 +1,149 @@
+.header {
+  background-color: #f8f9fa;
+  padding: 16px 0;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__left {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #43c5af;
+  }
+
+  &__center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 50px;
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      color: #222;
+      text-decoration: none;
+      padding: 6px 8px;
+      border-radius: 6px;
+      transition: background-color 0.12s ease, color 0.12s ease;
+      font-weight: 500;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+      }
+
+      &:focus {
+        outline: 3px solid rgba(67, 197, 175, 0.12);
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.15s ease, transform 0.08s ease;
+  border: 1px solid transparent;
+
+  &:focus {
+    outline: 3px solid rgba(67, 197, 175, 0.18);
+    outline-offset: 2px;
+  }
+
+  &--signup {
+    background-color: #ffffff;
+    color: #222;
+    border: 1px solid #e6e6e6;
+
+    &:hover {
+      background-color: #f2f2f2;
+    }
+  }
+
+  &--login {
+    background-color: #43c5af;
+    border: 1px solid #2fa88f;
+    color: #ffffff;
+
+    &:hover {
+      background-color: #36b79f;
+      transform: translateY(-1px);
+    }
+  }
+
+  &--profile {
+    background-color: #43c5af;
+    border: 1px solid #2fa88f;
+    color: #ffffff;
+
+    &:hover {
+      background-color: #36b79f;
+      transform: translateY(-1px);
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px 0;
+
+    &__menu {
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__right {
+      gap: 12px;
+    }
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    &__menu {
+      gap: 15px;
+    }
+
+    &__right {
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+}
